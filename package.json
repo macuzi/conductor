@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js"
   },
-  "keywords": [],
+  "keywords": ["cli", "diagnostics"],
   "author": "",
   "license": "ISC",
   "description": "",
@@ -13,9 +15,14 @@
     "@inquirer/prompts": "^7.10.0",
     "commander": "^14.0.2"
   },
+   "bin": {
+    "diag": "./dist/index.js"
+  },
   "devDependencies": {
     "@types/node": "^24.10.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
+
+
